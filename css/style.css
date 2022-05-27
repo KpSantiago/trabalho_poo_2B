@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  box-sizing: border-box;
+}
+body{
+  padding: 20px;
+  transition: 0.3s;
+}
+body.noturnMode{
+  background: #262626;
+  color: #fff;
+  transition: 0.3s;
+}
+header{
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 0;
+}
+#nightMode{
+  opacity: 0;
+}
+.containerSunMoon{
+  background: #262626;
+  width: 60px;
+  height: 25px;
+  margin-bottom: 45px;
+  display: grid;
+  place-content: center;
+  border: 1px solid white;
+  border-radius: 20px;
+  position: relative;
+}
+.ball{
+  background: #fff;
+  height: 18px;
+  width: 18px;
+  border-radius: 50px;
+  transform: translateX(-18px);
+  transition: 0.3s;
+}
+#nightMode:checked + .containerSunMoon .ball{
+  transform: translateX(17px);
+  transition: 0.3s;
+}
+.moon{
+  position: absolute;
+  z-index: 0;
+  transform: translate(3px, 4px);
+}
+.sun{
+  position: absolute;
+  z-index: 0;
+  transform: translate(38px, 4px);
+}
+h1{
+  margin-bottom: 30px;
+}
+span{
+ margin: 10px;
+}
+input{
+  margin-left: 5px;
+  outline-color: rgb(10, 210, 210);
+}
+#prime{
+  transform: translateY(3px);
+  margin-right: 5px;
+}
+#cadastro{
+  background: rgb(10, 210, 210);
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid rgb(6, 100, 100);
+}
+table{
+  border-spacing: 0;
+  margin-top: 30px;
+}
+caption{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+tr{
+  border: 1px solid #000;
+}
+tr.noturnMode{
+  transition: 0.3s;
+  border-color: #fff;
+  border-spacing: 0;
+}
+th{
+  background: rgb(10, 210, 210);
+  color: #fff;
+  padding: 10px 25px 10px 25px;
+  border: 1px solid #000;
+}
+.tbodyTh{
+  background: rgb(10, 175, 175);
+}
+td{
+  padding: 10px 25px 10px 25px;
+  border: 1px solid #000;
+}
+th.noturnMode{
+  transition: 0.3s;
+  border-color: #fff;
+}
+@media(max-width: 700px){
+  form{
+    display: grid;
+  }
+  header div{
+    transform: translateX(20px)
+  }
+  caption{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  table thead tr th{
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+  }
+}

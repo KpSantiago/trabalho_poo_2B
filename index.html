@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Cadastro de produtos</h1>
+    <div>
+      <input type="checkbox" id="nightMode">
+      <label for="nightMode" class="containerSunMoon">
+          <img class="moon" src="./icons/moon.svg">
+          <img class="sun" src="./icons/sun.svg">
+          <span class="ball"></span>
+      </label>
+    </div>
+  </header>
+  <form action="" id="info-produtos">
+    <span>
+     <label for="nomeProduto">Nome:</label><input type="text" name="" id="nomeProduto" placeholder="Ex.: Arroz">
+    </span>
+    <span>
+      <label for="precoProduto">Preço:</label><input type="number" name="" id="precoProduto" placeholder="Ex.: R$200,00">
+    </span>
+    <span>
+      <input type="checkbox" name="prime" id="prime">É Prime?
+      <input type="hidden" name="idx" id="idx" value="novo">
+    </span>
+    <span>
+      <input type="submit" id="cadastro" value="Cadastrar">
+    </span>
+  </form>
+  <table>
+    <caption><strong>Lista de produtos</strong></caption>
+    <thead>
+      <th class="heads">Indentificador</th>
+      <th class="heads">Nome do produto</th>
+      <th class="heads">Preço do produto</th>
+      <th class="heads">Prime</th>
+      <th class="heads">Ações</th>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <!-- Project -->
+  <script src="js/index.js"></script>
+  <script src="js/noturnMode.js"></script>
+</body>
+</html>
